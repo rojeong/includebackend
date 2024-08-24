@@ -1,0 +1,119 @@
+body {
+    font-family: 'Nanum Myeongjo', serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ccc;
+}
+
+.question-container {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1em;
+}
+
+select, input[type="text"], textarea {
+    width: 100%; /* 가로 길이를 부모 요소에 맞게 조정 */
+    max-width: 400px; /* 최대 너비 설정 */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: black;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 10px; /* 선택지와 버튼 사이의 여백 설정 */
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px; /* 버튼 크기 조절 */
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    max-width: 200px; /* 최대 너비 설정 */
+    display: block;
+    margin: 20px auto 0; /* 상단 여백 추가, 수평 중앙 정렬 */
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: block;
+}
+
+.action-container {
+    margin-top: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    text-align: center;
+}
+
+.options-container {
+    margin-bottom: 20px; /* 선택지와 버튼 사이의 여백 설정 */
+}
+
+input[type="radio"] + label {
+    display: block; /* 각 label을 블록으로 표시하여 아래에 여백 추가 */
+    margin-bottom: 10px; /* 아래쪽 여백을 추가하여 선택지 사이 간격 확보 */
+}
+
+input[type="radio"] {
+    display: none; /* 기본 라디오 버튼 숨기기 */
+}
+
+label {
+    display: block; /* label을 블록 요소로 설정 */
+    background-color: black; /* 배경색 설정 */
+    color: white; /* 텍스트 색상 설정 */
+    padding: 15px 30px; /* 버튼 크기 및 패딩 설정 */
+    border: 2px solid white; /* 테두리 설정 */
+    border-radius: 5px; /* 모서리 둥글게 설정 */
+    cursor: pointer; /* 커서 모양을 포인터로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    font-size: 16px; /* 폰트 크기 설정 */
+    margin-bottom: 10px; /* 선택지 사이 간격 설정 */
+    box-sizing: border-box; /* 패딩과 테두리가 버튼 크기에 포함되도록 설정 */
+}
+
+input[type="radio"]:checked + label {
+    background-color: darkgray; /* 선택된 상태의 배경색 설정 */
+}
+
+.celebrity-image {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}

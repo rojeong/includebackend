@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>운명의 롤모델 찾기 - 결과</title>
+    <link rel="stylesheet" href="style_result.css">
+</head>
+<body>
+    <img src="Result.svg" alt="결과 이미지" class="result-image">
+    <div id="result-container">
+        <!-- 결과 내용이 여기에 삽입 -->
+        <% if (celebrities && celebrities.length > 0) { %>
+            <h2><%= username %>님, 당신은 <strong><%= celebrities[0].name %></strong>님과 비슷한 성향이네요!</h2>
+            <% celebrities.forEach(celeb => { %>
+                <div class="celebrity">
+                    <h3><%= celeb.name %></h3>
+                    <img src="<%= celeb.image_url %>" alt="<%= celeb.name %>" class="celebrity-image">
+                    <p><%= celeb.description %></p>
+                    <h2><%= username %>님의 맞춤 강의 추천 링크 : <a href="<%= celeb.lecture_link %>" target="_blank">바로가기</a></h2>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <p>당신과 비슷한 성향의 유명인이 없습니다.</p>
+        <% } %>
+    </div>
+</body>
+</html>
+
+
+
