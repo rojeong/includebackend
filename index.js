@@ -42,7 +42,7 @@ const db = mysql.createConnection({
     port: 12559,
     connectTimeout: 10000,
     ssl: {
-        ca: fs.readFileSync('C:\\Program Files\\nodejs\\mbti-web\\ca (3).pem'),
+        ca: fs.readFileSync(path.join(__dirname, 'ca.pem')), // CA 파일을 현재 디렉토리에서 읽음
         rejectUnauthorized: true
     }
 });
